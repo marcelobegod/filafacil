@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+
+:root   {
+    --cinza:#D0D7E1;
+    --claro:#9CCDDB;
+    --medio:  #5790AB;
+    --escuro: #064469;
+    --escuroforte: #072D44;
+}
+
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+main    {
+    box-shadow: 0px 0px 10px black;
+    width: 360px;
+    height: 640px;
+    margin: auto;
+    background-color: var(--cinza);
+    font-family: 'Mina', cursive;
+}
+
+.container  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.filafacil {
+    background-color: #072D44;
+    color: white;
+    height: 88px;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+}
+    
+.navegador {
+    background-color: var(--escuro);
+    color: white;
+    height: 46px;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+}
+
+p   {
+    margin: 0; /* Remover margem padrão */
+    font-weight: bold; /* Torna o texto em negrito */
+    text-align: center; /* Centraliza o texto horizontalmente dentro da div */
+}
+
+.filafacil p {
+    font-size: 60px; /* Aumenta o tamanho do texto */
+  }
+
+.navegador p {
+    font-size: 20px; /* Aumenta o tamanho do texto */
+}
+
+
