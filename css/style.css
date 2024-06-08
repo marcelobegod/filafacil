@@ -32,7 +32,7 @@ main    {
 
 
 .filafacil {
-    background-color: #072D44;
+    background-color: var(--escuroforte);
     color: white;
     height: 88px;
     display: flex;
@@ -49,6 +49,13 @@ main    {
     align-items: center; /* Alinha verticalmente */
 }
 
+.conteudo {
+    height: 506px;
+    justify-content: center; /* Alinha horizontalmente */
+    display: flex;
+    flex-direction: column;
+}
+
 p   {
     margin: 0; /* Remover margem padrão */
     font-weight: bold; /* Torna o texto em negrito */
@@ -63,4 +70,14 @@ p   {
     font-size: 20px; /* Aumenta o tamanho do texto */
 }
 
+.largurabtn {
+    width: 261px;
+    height: 60px;
+    background-color: var(--escuroforte);
+}
 
+.textobtn   {
+    font-size: 35px; /* Aumenta o tamanho do texto */
+    font-weight: bold; /* Torna o texto em negrito */
+    border-radius: 10px
+}
