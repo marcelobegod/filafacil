@@ -81,3 +81,7 @@ p   {
     font-weight: bold; /* Torna o texto em negrito */
     border-radius: 10px
 }
+
+.largbut {
+    width: 90%;
+}
