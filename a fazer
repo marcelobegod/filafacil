@@ -1,0 +1,2 @@
+*botão criar fila quando clicado vai checar se o usuário está logado, caso não esteja, vai abrir tela de login
+*quando clicar em logar, vai aparecer mensagem "Usuário ou senha incorretos"
