@@ -82,6 +82,11 @@ p   {
     border-radius: 10px
 }
 
-.largbut {
+.largmsg {
     width: 90%;
+}
+
+.btnhome    {
+    background-color: var(--escuroforte);
+    border-radius: 10px
 }
