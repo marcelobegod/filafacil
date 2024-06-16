@@ -17,7 +17,7 @@
                         <p>Fila Fácil</p>
                     </div>
                     <div class="navegador">
-                        <p>Logar</p>
+                        <p>Home</p>
                     </div>
                 </div>
                 <!-- content -->
@@ -47,13 +47,13 @@
                 <div class="footer">
                     <div class="row d-flex justify-content-center mx-auto largfoot">
                         <div class="col-4 p-1">
-                            <a href="http://localhost/filafacil/base/queue.php" class="btn btn-primary btnhome"><i class="fas fa-list btn-menu"></i>Filas</a>
+                            <a href="#" class="btn btn-primary btnhome"><i class="fas fa-list btn-menu"></i>Filas</a>
                         </div>
                         <div class="col-4 p-1">
                             <a href="http://localhost/filafacil/base/home.php" class="btn btn-primary btnhome"><i class="fas fa-home btn-menu"></i> Home</a>
                         </div>
                         <div class="col-4 p-1">
-                            <a href="http://localhost/filafacil/base/user.php" class="btn btn-primary btnhome"><i class="fas fa-user btn-menu"></i> Usuário</a>
+                            <a href="#" class="btn btn-primary btnhome"><i class="fas fa-user btn-menu"></i> Usuário</a>
                         </div>
                     </div>
                 </div>

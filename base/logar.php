@@ -24,15 +24,15 @@
                 <div class="content text-center justify-content-center p-3">
                         <div class="row justify-content-center">
                             <div class="alert alert-danger largmsg" role="alert">
-                                Mensagem de erro de login vai ser aqui
+                                Mensagem de erro de login aqui.
                             </div>
                             <div class="">
                                 <form action="validacao.php" method="post">
                                 <div class="form-group row justify-content-center mb-1">
-                                    <input type="text" class="form-control" style="width: 261px; height: 50px;" placeholder="Usuário" name="usu_usu">
+                                    <input type="text" class="form-control" style="width: 300px; height: 50px;" placeholder="Usuário" name="usu_usu">
                                 </div>
                                 <div class="form-group row justify-content-center mb-2">
-                                    <input type="password" class="form-control" style="width: 261px; height: 50px;" placeholder="Senha" name="senha_usu">
+                                    <input type="password" class="form-control" style="width: 300px; height: 50px;" placeholder="Senha" name="senha_usu">
                                 </div>
                                 <div class="justify-content-center mb-2">
                                     <div class="col-12 form-group">
