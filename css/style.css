@@ -15,59 +15,40 @@
     box-sizing: border-box;
 } 
 
-main    {
-    box-shadow: 0px 0px 10px black;
-    width: 360px;
-    height: 640px;
-    margin: auto;
+.principal   {
     background-color: var(--cinza);
     font-family: 'Mina', cursive;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.container  {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.topper {
+    height: 124px;
+    flex: 1;
 }
-
 
 .filafacil {
     background-color: var(--escuroforte);
     color: white;
     height: 88px;
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: center; /* Alinha verticalmente */
+    font-size: 60px; 
 }
     
 .navegador {
     background-color: var(--escuro);
     color: white;
-    height: 46px;
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: center; /* Alinha verticalmente */
+    height: 36px;
+    font-size: 20px;
 }
 
-.conteudo {
-    height: 506px;
-    justify-content: center; /* Alinha horizontalmente */
-    display: flex;
-    flex-direction: column;
+.content    {
+    height: 70%;
 }
 
 p   {
-    margin: 0; /* Remover margem padrão */
-    font-weight: bold; /* Torna o texto em negrito */
-    text-align: center; /* Centraliza o texto horizontalmente dentro da div */
-}
-
-.filafacil p {
-    font-size: 60px; /* Aumenta o tamanho do texto */
-  }
-
-.navegador p {
-    font-size: 20px; /* Aumenta o tamanho do texto */
+    font-weight: bold;
+    text-align: center; 
 }
 
 .largurabtn {
@@ -77,16 +58,33 @@ p   {
 }
 
 .textobtn   {
-    font-size: 35px; /* Aumenta o tamanho do texto */
-    font-weight: bold; /* Torna o texto em negrito */
+    font-size: 30px; 
+    font-weight: bold; 
     border-radius: 10px
-}
-
-.largmsg {
-    width: 90%;
 }
 
 .btnhome    {
-    background-color: var(--escuroforte);
-    border-radius: 10px
+    background-color: var(--escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px;    
 }
+
+.active-btn {
+    color: var(--claro);
+}
+
+.footer {
+    background-color: var(--escuro);
+    height: auto;
+}
+
+.largfoot   {
+    max-width: 250px;
+}
+
+.btn-menu {
+    margin: 0 10px;
+}
+
