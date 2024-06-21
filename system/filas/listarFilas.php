@@ -69,7 +69,7 @@ mysqli_close($conexao);
         <div class="modal-content">
             <form method="POST" id="loginAccessForm" class="needs-validation box" novalidate name="form">
                 <div class="modal-header">
-                    <img src="/assets/img/Screenshot_1.png" alt="Logo Fila Fácil">
+                    <img src="../assets/img/Screenshot_1.png" alt="Logo Fila Fácil">
                 </div>
                 <div class="modal-body">
 

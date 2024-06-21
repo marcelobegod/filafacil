@@ -1,44 +1,36 @@
 .container {
-  height: 300px;
+  height: 60vh;
   overflow: scroll;
+  border: 2px solid var(--letraLogo);
+  border-radius: 3px;
 }
 
 .table-responsive {
   min-width: 100%;
 }
 .table-wrapper {
-  background: #fff;
+  background: var(--background);
   padding: 10px 15px;
   border-radius: 3px;
   min-width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .table-title {
-  background: #435d7d;
-  color: #fff;
-  padding: 16px 30px;
+  background: var(--background);
+  color: var(--letraLogo);
+  padding: 16px 30px 0 30px;
   min-width: 100%;
   margin: -20px -25px 10px;
   border-radius: 3px 3px 0 0;
 }
 .table-title h2 {
   margin: 5px 0 0;
-  font-size: 24px;
+  font-size: 2rem;
 }
 .table-title .btn-group {
   float: right;
 }
-.table-title .btn {
-  color: #fff;
-  float: right;
-  font-size: 13px;
-  border: none;
-  min-width: 50px;
-  border-radius: 2px;
-  border: none;
-  outline: none !important;
-  margin-left: 10px;
-}
+
 .table-title .btn i {
   float: left;
   font-size: 21px;

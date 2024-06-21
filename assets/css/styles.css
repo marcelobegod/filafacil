@@ -3,6 +3,7 @@
 @import url("login_index.css");
 @import url("footer.css");
 @import url("visit.css");
+@import url("content.css");
 
 :root {
   --cinza: #d0d7e1;
