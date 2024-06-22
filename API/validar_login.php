@@ -18,9 +18,6 @@ $senha = trim($dados['senha_usu']);
 // Armazena o resultado da função que verifica se usuário já existe no BD
 $usuario = verifyLogin($email, $senha);
 
-// Depura a variável $usuario
-error_log("Verificando usuário: " . var_export($usuario, true));
-
 // Verifica se o usuário foi encontrado no banco de dados
 if ($usuario) {
     // Define a variável de sessão 'nivel_usu'

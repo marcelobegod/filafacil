@@ -59,8 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                 }
             } catch (error) {
+                console.error("Erro durante o login:", error);
                 Swal.fire({
-                    text: 'Erro ao tentar logar. Tente novamente.',
+                    text: 'Ocorreu um erro ao tentar logar. Tente novamente.', // Mensagem de erro genérica
                     icon: "error",
                     confirmButtonColor: "#3085d6",
 
