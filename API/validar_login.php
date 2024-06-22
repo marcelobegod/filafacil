@@ -35,12 +35,11 @@ if ($usuario) {
 } else {
     // Caso contrário, retorna uma mensagem de erro
     $retorna = ['status' => false, 'msg' => "E-mail ou senha incorretos. Por favor, tente novamente."];
-
-    // Limpa qualquer saída antes de enviar o JSON
-    ob_end_clean();
-
-    // Retorna os dados JSON
-    header('Content-Type: application/json');
-    echo json_encode($retorna);
-    exit;
 }
+// Limpa qualquer saída antes de enviar o JSON
+ob_end_clean();
+
+// Retorna os dados JSON
+header('Content-Type: application/json');
+echo json_encode($retorna);
+    //exit;

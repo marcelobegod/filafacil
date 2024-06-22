@@ -4,10 +4,10 @@
             <a href="#" onclick="logout()">Criar Filas</a>
         </li>
         <li>
-            <a href="listarDisciplinas.php">Listar Filas</a>
+            <a href="#" onclick="logout()">Listar Filas</a>
         </li>
         <li>
-            <a href="listarFuncionarios.php">Sair</a>
+            <a href="#" onclick="logout()">Sair</a>
         </li>
     </ul>
 </footer>
