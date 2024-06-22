@@ -11,16 +11,18 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 // Inicializa o array de resposta
 $retorna = [];
 
-//Receber e limpar os dados do formulário
+// Receber e limpar os dados do formulário
 $email = trim($dados['email_usu']);
 $senha = trim($dados['senha_usu']);
 
 // Armazena o resultado da função que verifica se usuário já existe no BD
 $usuario = verifyLogin($email, $senha);
 
+// Depura a variável $usuario
+error_log("Verificando usuário: " . var_export($usuario, true));
+
 // Verifica se o usuário foi encontrado no banco de dados
 if ($usuario) {
-
     // Define a variável de sessão 'nivel_usu'
     $_SESSION["id_usu"] = $usuario["id_usu"];
     $_SESSION["nome_usu"] = $usuario["nome_usu"];
@@ -34,7 +36,7 @@ if ($usuario) {
         'nivel_usu' => $usuario["nivel_usu"],
         'logged_in' => true
     ];
-} else if (!$usuario('email_usu')) {
+} else {
     // Caso contrário, retorna uma mensagem de erro
     $retorna = ['status' => false, 'msg' => "E-mail ou senha incorretos. Por favor, tente novamente."];
 }
@@ -42,7 +44,7 @@ if ($usuario) {
 // Limpa qualquer saída antes de enviar o JSON
 ob_end_clean();
 
-
 // Retorna os dados JSON
 header('Content-Type: application/json');
 echo json_encode($retorna);
+exit;
