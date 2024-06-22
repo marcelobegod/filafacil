@@ -2,7 +2,7 @@
 <footer class="footer">
     <ul class="list">
         <li>
-            <a href="listarAlunos.php">Home</a>
+            <a href="#" onclick="logout()">Home</a>
         </li>
         <li>
             <a href="listarDisciplinas.php">Filas</a>
@@ -20,6 +20,9 @@
 
 <!-- SCRIPTS -->
 <script src="../assets/js/logout.js" defer></script>
+<script src="../assets/js/manage_modals.js" defer></script>
+<script src="../js/loadContent.js"></script>
+
 </body>
 
 </html>

@@ -1,39 +1,29 @@
-// validar_cad_users.js
 console.log('Validar cad_users carregada');
 
-function validar_cad_loginUsers(form) {
+function validar_cad_users(form) {
+    const cadAccessUsers = form;
 
-    const cadUsuarioForm = form;
-
-    if (cadUsuarioForm) {
-        console.log('botão clicado');
-        //Adicionar um listner ao submit
-        cadUsuarioForm.addEventListener('submit', async (e) => {
-            // Impede o envio padrão do formulário
+    if (cadAccessUsers) {
+        cadAccessUsers.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // Validação do lado do cliente usando Bootstrap
-            if (cadUsuarioForm.checkValidity() === false) {
+            if (cadAccessUsers.checkValidity() === false) {
                 e.stopPropagation();
-                cadUsuarioForm.classList.add('was-validated');
+                cadAccessUsers.classList.add('was-validated');
                 return;
             }
 
-            // Cria um objeto FormData com os dados do formulário
             const dadosFormulario = new FormData(form);
 
-            // Envia os dados para a API usando fetch
             try {
                 console.log('Enviando dados para a API...');
-                const response = await fetch('http://localhost/sidebar-01/API/cad_loginUsers.php', {
+                const response = await fetch('http://localhost/Fila_Facil/API/cad_accessUsers.php', {
                     method: "POST",
                     body: dadosFormulario
                 });
-                console.log('formulario enviado para API');
                 const resposta = await response.json();
-                console.log('Resposta da API:', response);
+                console.log('Resposta da API:', resposta);
 
-                // Verifica se o cadastro foi bem-sucedido
                 if (resposta.status) {
                     console.log('Resposta da API:', resposta);
                     const Toast = Swal.mixin({
@@ -53,7 +43,6 @@ function validar_cad_loginUsers(form) {
                         title: resposta.msg
                     });
 
-                    // Fecha o modal e limpa o formulário (se necessário)
                     closeModalCad();
 
                 } else {
@@ -73,8 +62,7 @@ function validar_cad_loginUsers(form) {
             }
         });
 
-        // Adiciona a classe 'is-valid' ou 'is-invalid' aos inputs
-        cadUsuarioForm.addEventListener('input', function (event) {
+        cadAccessUsers.addEventListener('input', function (event) {
             if (event.target.checkValidity()) {
                 event.target.classList.remove('is-invalid');
                 event.target.classList.add('is-valid');
@@ -86,37 +74,28 @@ function validar_cad_loginUsers(form) {
     }
 }
 
-
-// Função para fechar o modal e limpar o formulário
 function closeModalCad() {
-    //Obtém o id do modal
     const modal = document.getElementById('modalCadastro');
     if (modal) {
-        //Obtém a instância do modal e a fecha.
         const modalInstance = bootstrap.Modal.getInstance(modal);
         if (modalInstance) {
             modalInstance.hide();
         }
     }
-    //Redefine os valores dos inputs e remove as classes de validação.
-    const inputs = document.querySelectorAll('#cadLoginUsers input');
+    const inputs = document.querySelectorAll('#cadAccessUsers input');
     inputs.forEach(input => {
         input.value = '';
         input.classList.remove('is-valid', 'is-invalid');
     });
-    //Remove a classe was-validated para que as mensagens de validação não sejam exibidas
-    //na próxima vez que o formulário for aberto.
-    const cadUsuarioForm = document.getElementById('cadUsuarioForm');
-    if (cadUsuarioForm) {
-        cadUsuarioForm.classList.remove('was-validated');
+    const cadAccessUsers = document.getElementById('cadAccessUsers');
+    if (cadAccessUsers) {
+        cadAccessUsers.classList.remove('was-validated');
     }
 }
-// Chama a função para iniciar a validação **APENAS DENTRO DO DOMContentLoaded**
+
 document.addEventListener('DOMContentLoaded', function () {
-    const cadUsuarioForm = document.getElementById('cadLoginUsers');
-    if (cadUsuarioForm) {
-        validar_cad_loginUsers(cadUsuarioForm);
+    const cadAccessUsers = document.getElementById('cadAccessUsers');
+    if (cadAccessUsers) {
+        validar_cad_users(cadAccessUsers);
     }
 });
-
-

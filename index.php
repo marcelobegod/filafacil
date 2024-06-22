@@ -20,6 +20,9 @@
     <!---Link CSS--->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+
+    <!-- SweetAlert CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -55,28 +58,28 @@
     <div class="modal fade" id="modalCadastro" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" id="cadLoginUsers" class="needs-validation box" novalidate name="form">
+                <form method="POST" id="cadAccessUsers" class="needs-validation box" novalidate name="form">
                     <div class="modal-header">
                         <img src="./assets/img/Screenshot_4.png" alt="Logo Fila Fácil">
                     </div>
 
                     <div class="modal-body">
-                        <input type="text" name="nome_login" placeholder="Nome" class="form-control" required>
+                        <input type="text" name="nome_usu" placeholder="Nome" class="form-control" required>
                         <div class="invalid-feedback">Por favor preencha o nome do usuário.</div>
 
-                        <input type="tel" name="tel_login" placeholder="Telefone" class="form-control"
-                            autocomplete="tel" required>
+                        <input type="tel" name="tel_usu" placeholder="Telefone" class="form-control" autocomplete="tel"
+                            required>
                         <div class="invalid-feedback">Por favor preencha o telefone do usuário.</div>
 
-                        <input type="email" name="email_login" placeholder="E-mail" class="form-control"
+                        <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
                             autocomplete="email" required>
                         <div class="invalid-feedback">Por favor preencha o e.mail do usuário.</div>
 
-                        <input type="password" name="pass_login" placeholder="Password" class="form-control"
+                        <input type="password" name="senha_usu" placeholder="Password" class="form-control"
                             autocomplete="curent-password" required>
                         <div class="invalid-feedback">Por favor preencha uma senha válida.</div>
 
-                        <input id="btnCloseModal" type="submit" name="" value="Cadastrar" href="#">
+                        <input id="btnCloseModal" type="submit" value="Cadastrar" href="#">
 
                         <div>
                             <ul class="social-network social-circle">
@@ -116,7 +119,7 @@
 
                         <div class="invalid-feedback">Por favor preencha o e.mail para acesso.</div>
 
-                        <input type="password" name="pass_usu" placeholder="Password" class="form-control"
+                        <input type="password" name="senha_usu" placeholder="Password" class="form-control"
                             autocomplete="curent-password" required>
 
                         <div class="invalid-feedback">Por favor preencha uma senha válida</div>

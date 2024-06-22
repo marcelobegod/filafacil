@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             try {
 
-                const response = await fetch('./API/validar_login.php', {
+                const response = await fetch('http://localhost/Fila_Facil/API/validar_login.php', {
                     method: "POST",
                     body: dadosLogin
                 });

@@ -4,7 +4,7 @@ function verifyLogin($email, $senha)
     global $conexao;
 
     // Prepara a consulta para verificar o email
-    $stmt = $conexao->prepare("SELECT id_usu, nome_usu, nivel_usu, pass_usu FROM usuario WHERE email_usu = ?");
+    $stmt = $conexao->prepare("SELECT id_usu, nome_usu, nivel_usu, senha_usu FROM usuario WHERE email_usu = ?");
     if ($stmt === false) {
         return false;
     }
