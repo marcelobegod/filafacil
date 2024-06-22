@@ -55,10 +55,11 @@
     <!----MODAIS ACESSO E CADASTRO-->
 
     <!-- Modal CADASTRO-->
+    <!-- Modal CADASTRO -->
     <div class="modal fade" id="modalCadastro" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" id="cadAccessUsers" class="needs-validation box" novalidate name="form">
+                <form method="POST" id="cadAccessUsers" class="needs-validation box" novalidate>
                     <div class="modal-header">
                         <img src="./assets/img/Screenshot_4.png" alt="Logo Fila Fácil">
                     </div>
@@ -73,29 +74,27 @@
 
                         <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
                             autocomplete="email" required>
-                        <div class="invalid-feedback">Por favor preencha o e.mail do usuário.</div>
+                        <div class="invalid-feedback">Por favor preencha o e-mail do usuário.</div>
 
                         <input type="password" name="senha_usu" placeholder="Password" class="form-control"
-                            autocomplete="curent-password" required>
+                            autocomplete="current-password" required>
                         <div class="invalid-feedback">Por favor preencha uma senha válida.</div>
 
-                        <input id="btnCloseModal" type="submit" value="Cadastrar" href="#">
+                        <input id="btnCloseModal" type="submit" value="Cadastrar" class="btn btn-primary">
 
                         <div>
                             <ul class="social-network social-circle">
                                 <li><a href="#" class="icoFacebook" title="Facebook"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                </li>
+                                            class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a>
                                 </li>
                                 <li><a href="#" class="icoGoogle" title="Google +"><i
-                                            class="fab fa-google-plus"></i></a>
-                                </li>
+                                            class="fab fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <p class=text-muted>
+                        <p class="text-muted">
                             <a href="#" onclick="logout()">SAIR<i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                         </p>
                     </div>
@@ -103,6 +102,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Modal ACESSO -->
     <div class="modal fade" id="modalAcesso" tabindex="-1" aria-hidden="true">

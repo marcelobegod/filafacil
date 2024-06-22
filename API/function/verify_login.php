@@ -1,7 +1,4 @@
 <?php
-$email = 'r@r.com';
-$senha = '000000';
-
 function verifyLogin($email, $senha)
 {
     global $conexao;
@@ -25,7 +22,7 @@ function verifyLogin($email, $senha)
         $stmt->bind_result($id_usu, $nome_usu, $nivel_usu, $hashSenha);
         $stmt->fetch();
 
-        // ADICIONAR VAR_DUMP AQUI:
+        // Debug
         var_dump($id_usu, $nome_usu, $nivel_usu, $hashSenha);
         ob_flush();
         error_log("Hash da senha antes: " . $hashSenha);
