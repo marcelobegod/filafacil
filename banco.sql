@@ -36,6 +36,10 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8;
 
+<?php
+	
+?>
+
 
 -- -----------------------------------------------------
 -- Table `filafacil`.`criarfila`

@@ -1,2 +1,23 @@
 *botão criar fila quando clicado vai checar se o usuário está logado, caso não esteja, vai abrir tela de login
 *quando clicar em logar e login não funcionar, vai aparecer mensagem "Usuário ou senha incorretos"
+
+if (isset($_SESSION['UsuarioNivel'])) {
+    include("navbar.php");
+} else {
+    // Caso o usuário não esteja logado, você pode adicionar um redirecionamento ou mensagem de erro
+    echo "Usuário não está logado.";
+}
+
+
+switch($_SESSION['UsuarioNivel']) {
+                        case 1:
+                            include("navbar1.php");
+                            break;
+                        case 2:
+                            include("navbar2.php");
+                            break;
+                        default:
+                            // Caso o nível do usuário não seja 1 ou 2, você pode adicionar um redirecionamento ou mensagem de erro
+                            echo "Nível de usuário não reconhecido.";
+                            break;
+                    }
