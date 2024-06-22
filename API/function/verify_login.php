@@ -22,12 +22,6 @@ function verifyLogin($email, $senha)
         $stmt->bind_result($id_usu, $nome_usu, $nivel_usu, $hashSenha);
         $stmt->fetch();
 
-        // Debug
-        var_dump($id_usu, $nome_usu, $nivel_usu, $hashSenha);
-        ob_flush();
-        error_log("Hash da senha antes: " . $hashSenha);
-        error_log("Senha fornecida: " . $senha);
-
         // Utilize password_verify para comparação
         if (password_verify($senha, $hashSenha)) {
             error_log("Senha verificada com sucesso.");
