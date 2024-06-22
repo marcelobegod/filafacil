@@ -15,6 +15,11 @@ function validar_cad_users(form) {
 
             const dadosFormulario = new FormData(form);
 
+            // Imprimir os dados antes de enviar para a API
+            for (let pair of dadosFormulario.entries()) {
+                console.log(pair[0] + ', ' + pair[1]);
+            }
+
             try {
                 console.log('Enviando dados para a API...');
                 const response = await fetch('http://localhost/Fila_Facil/API/cad_accessUsers.php', {
@@ -25,7 +30,6 @@ function validar_cad_users(form) {
                 console.log('Resposta da API:', resposta);
 
                 if (resposta.status) {
-                    console.log('Resposta da API:', resposta);
                     const Toast = Swal.mixin({
                         toast: true,
                         position: "top-end",

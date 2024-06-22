@@ -7,7 +7,8 @@ include_once("conexao.php");
 include_once("./function/criar_hash.php");
 include_once("./function/verify_users.php");
 
-header('Content-Type: application/json'); // Sempre envie cabeçalho JSON
+// Sempre envie cabeçalho JSON
+header('Content-Type: application/json');
 
 // Inicializa o array de resposta
 $retorna = [];
