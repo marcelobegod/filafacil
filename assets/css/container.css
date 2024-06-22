@@ -8,7 +8,6 @@
   max-width: 500px;
   border-radius: 2rem;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border: red solid 3px;
 }
 #dynamic-content h1 {
   color: red;

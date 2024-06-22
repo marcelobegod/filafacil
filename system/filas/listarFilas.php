@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('../API/conexao.php');
+include_once('../../API/conexao.php');
 
 /* ## LÓGICA A PAGINAÇÃO ## */
 
