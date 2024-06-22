@@ -29,8 +29,8 @@
     <main id="dynamic-content">
         <!-- BOX Login -->
         <div id=" acessoModal" class="box-index">
-            <input type="submit" value="Acessar Fila"
-                onclick="window.location.href = './layout/dash.php?page=listarFilas'; event.preventDefault();">
+            <input type="submit" value="Acessar Fila" href="javascript:void(0)" onclick="loadContent('/Fila_Facil/system/filas/listarFilas.php'); 
+                event.preventDefault();">
             <input id="openLogin" type="submit" value="Criar Fila">
             <img src="./assets/img/logoff.png" class="img-fluid" alt="Logoff">
         </div>
@@ -171,6 +171,8 @@
     <script src="./assets/js/index/validar_cad_users.js" defer></script>
     <script src="./assets/js/index/validar_login.js" defer></script>
     <script src="./assets/js/logout.js" defer></script>
+    <script src="./assets/js/initDynamicContent.js" defer></script>
+    <script src="./assets/js/loadContent.js"></script>
 
 </body>
 
