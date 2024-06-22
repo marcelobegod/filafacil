@@ -1,17 +1,12 @@
 <!-- Seção de Footer/Rodapé -->
-<footer id="dynamic-content" class="footer">
-    <ul class="list">
-        <li>
-            <a href="#" onclick="logout()">Home</a>
-        </li>
-        <li>
-            <a href="listarDisciplinas.php">Filas</a>
-        </li>
-        <li>
-            <a href="listarFuncionarios.php">Usuários</a>
-        </li>
-    </ul>
-</footer>
+
+
+<div class="sidebar close">
+    <?php
+    // Incluir a sidebar correta de acordo com o nível do usuário
+    include_once(__DIR__ . '/../API/function/switchNiveis.php');
+    ?>
+</div>
 
 <!-- SCRIPS BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

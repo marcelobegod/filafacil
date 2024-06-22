@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         icon: "success",
                         title: resposta.msg
                     }).then(() => {
-                        closeModalAccess();
 
+                        closeModalAccess();
                         //redireciona para a pagina dash
                         window.location.href = "./layout/dash.php";
 
@@ -53,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         text: resposta.msg,
                         icon: "error",
                         confirmButtonColor: "#3085d6",
+
+                    }).then(() => {
+
                     });
                 }
             } catch (error) {
@@ -60,7 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     text: 'Erro ao tentar logar. Tente novamente.',
                     icon: "error",
                     confirmButtonColor: "#3085d6",
+
                 });
+                closeModalAccess();
             }
         });
 
