@@ -1,6 +1,6 @@
 <?php
-$senha = '111111';
-$hashArmazenado = '$2y$10$V1bG7C5CYUbuShnbO4.oiupoG3xox0XjTVb4f5'; // Hash armazenado no banco
+$senha = '111';
+$hashArmazenado = '$2y$12$Mti2pTZoQj3pYi/9dHGLNerlt4wIguwjx60.GOamxY3arvTFsqx0m'; // Hash armazenado no banco
 
 if (password_verify($senha, $hashArmazenado)) {
     echo "Senha verificada com sucesso.";

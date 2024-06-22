@@ -1,5 +1,5 @@
 <!-- Seção de Footer/Rodapé -->
-<footer class="footer">
+<footer id="dynamic-content" class="footer">
     <ul class="list">
         <li>
             <a href="#" onclick="logout()">Home</a>

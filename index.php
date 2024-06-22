@@ -36,23 +36,60 @@
         </div>
     </main>
 
-    <!-- Seção de Footer/Rodapé -->
-    <footer class="footer">
-        <ul class="list">
-            <li>
-                <a href="#" onclick="logout()">Home</a>
-            </li>
-            <li>
-                <a href="#" onclick="loadContent('/Fila_Facil/system/filas/listarFilas.php');
-            event.preventDefault();">Filas</a>
-            </li>
-            <li>
-                <a href="listarFuncionarios.php">Usuários</a>
-            </li>
-        </ul>
-    </footer>
-
     <!----MODAIS ACESSO E CADASTRO-->
+
+
+    <!-- Modal ACESSO -->
+    <div class="modal fade" id="modalAcesso" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="POST" id="loginAccessForm" class="needs-validation box" novalidate name="form">
+                    <div class="modal-header">
+                        <img src="./assets/img/Screenshot_1.png" alt="">
+                    </div>
+                    <div class="modal-body">
+
+                        <p class="text-muted">Por favor digite o seu e.mail e senha!</p>
+
+                        <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
+                            autocomplete="email" required>
+
+                        <div class="invalid-feedback">Por favor preencha o e.mail para acesso.</div>
+
+                        <input type="password" name="senha_usu" placeholder="Password" class="form-control"
+                            autocomplete="curent-password" required>
+
+                        <div class="invalid-feedback">Por favor preencha uma senha válida</div>
+
+                        <a class="forgot text-muted" href="#">Esqueceu a senha?</a>
+
+                        <input id="btnClose" type="submit" value="Acessar" href="#">
+
+                        <div class="col-md-12">
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i
+                                            class="fab fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p class="text-muted">Não tem cadastro?
+                            <a id="cadastro" href="#!"> Cadastre-se</a>
+                        </p>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Modal CADASTRO-->
@@ -107,56 +144,23 @@
     </div>
 
 
-    <!-- Modal ACESSO -->
-    <div class="modal fade" id="modalAcesso" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form method="POST" id="loginAccessForm" class="needs-validation box" novalidate name="form">
-                    <div class="modal-header">
-                        <h1>Login</h1>
-                    </div>
-                    <div class="modal-body">
 
-                        <p class="text-muted">Por favor digite o seu e.mail e senha!</p>
+    <!-- Seção de Footer/Rodapé -->
+    <footer class="footer">
+        <ul class="list">
+            <li>
+                <a href="#" onclick="logout()">Home</a>
+            </li>
+            <li>
+                <a href="#" onclick="loadContent('/Fila_Facil/system/filas/listarFilas.php');
+            event.preventDefault();">Filas</a>
+            </li>
+            <li>
+                <a href="listarFuncionarios.php">Usuários</a>
+            </li>
+        </ul>
+    </footer>
 
-                        <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
-                            autocomplete="email" required>
-
-                        <div class="invalid-feedback">Por favor preencha o e.mail para acesso.</div>
-
-                        <input type="password" name="pass_usu" placeholder="Password" class="form-control"
-                            autocomplete="curent-password" required>
-
-                        <div class="invalid-feedback">Por favor preencha uma senha válida</div>
-
-                        <a class="forgot text-muted" href="#">Esqueceu a senha?</a>
-
-                        <input id="btnClose" type="submit" value="Acessar" href="#">
-
-                        <div class="col-md-12">
-                            <ul class="social-network social-circle">
-                                <li><a href="#" class="icoFacebook" title="Facebook"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li><a href="#" class="icoGoogle" title="Google +"><i
-                                            class="fab fa-google-plus"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <p class="text-muted">Não tem cadastro?
-                            <a id="cadastro" href="#!"> Cadastre-se</a>
-                        </p>
-
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
     <!-- SCRIPS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

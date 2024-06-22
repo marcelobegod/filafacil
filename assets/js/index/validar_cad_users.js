@@ -6,7 +6,7 @@ function validar_cad_loginUsers(form) {
     const cadUsuarioForm = form;
 
     if (cadUsuarioForm) {
-        console.log('botão clicado');
+
         //Adicionar um listner ao submit
         cadUsuarioForm.addEventListener('submit', async (e) => {
             // Impede o envio padrão do formulário
@@ -25,7 +25,7 @@ function validar_cad_loginUsers(form) {
             // Envia os dados para a API usando fetch
             try {
                 console.log('Enviando dados para a API...');
-                const response = await fetch('http://localhost/sidebar-01/API/cad_loginUsers.php', {
+                const response = await fetch('http://localhost/Fila_Facil/API/cad_accessUsers.php', {
                     method: "POST",
                     body: dadosFormulario
                 });
