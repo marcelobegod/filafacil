@@ -54,81 +54,34 @@
 
     <!----MODAIS ACESSO E CADASTRO-->
 
+
     <!-- Modal CADASTRO-->
-    <!-- Modal CADASTRO -->
     <div class="modal fade" id="modalCadastro" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form method="POST" id="cadAccessUsers" class="needs-validation box" novalidate>
+                <form method="POST" id="cadLoginUsers" class="needs-validation box" novalidate name="form">
                     <div class="modal-header">
-                        <img src="./assets/img/Screenshot_4.png" alt="Logo Fila Fácil">
+                        <img src="./assets/img/Screenshot_4.png" alt="">
                     </div>
-
                     <div class="modal-body">
+
                         <input type="text" name="nome_usu" placeholder="Nome" class="form-control" required>
-                        <div class="invalid-feedback">Por favor preencha o nome do usuário.</div>
+                        <div class="invalid-feedback">Por favor preencha o seu nome.</div>
 
-                        <input type="tel" name="tel_usu" placeholder="Telefone" class="form-control" autocomplete="tel"
-                            required>
-                        <div class="invalid-feedback">Por favor preencha o telefone do usuário.</div>
-
-                        <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
-                            autocomplete="email" required>
-                        <div class="invalid-feedback">Por favor preencha o e-mail do usuário.</div>
-
-                        <input type="password" name="senha_usu" placeholder="Password" class="form-control"
-                            autocomplete="current-password" required>
-                        <div class="invalid-feedback">Por favor preencha uma senha válida.</div>
-
-                        <input id="btnCloseModal" type="submit" value="Cadastrar" class="btn btn-primary">
-
-                        <div>
-                            <ul class="social-network social-circle">
-                                <li><a href="#" class="icoFacebook" title="Facebook"><i
-                                            class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li><a href="#" class="icoGoogle" title="Google +"><i
-                                            class="fab fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <p class="text-muted">
-                            <a href="#" onclick="logout()">SAIR<i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-                        </p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal ACESSO -->
-    <div class="modal fade" id="modalAcesso" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form method="POST" id="loginAccessForm" class="needs-validation box" novalidate name="form">
-                    <div class="modal-header">
-                        <img src="./assets/img/Screenshot_1.png" alt="Logo Fila Fácil">
-                    </div>
-                    <div class="modal-body">
+                        <input type="tel" name="tel_usu" placeholder="Nome" class="form-control" required>
+                        <div class="invalid-feedback">Por favor preencha o seu telefone.</div>
 
                         <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
                             autocomplete="email" required>
-
-                        <div class="invalid-feedback">Por favor preencha o e.mail para acesso.</div>
+                        <div class="invalid-feedback">Por favor preencha o e.mail do usuário</div>
 
                         <input type="password" name="senha_usu" placeholder="Password" class="form-control"
                             autocomplete="curent-password" required>
-
                         <div class="invalid-feedback">Por favor preencha uma senha válida</div>
 
-                        <a class="forgot text-muted" href="#">Esqueceu a senha?</a>
+                        <input id="btnCloseModal" type="submit" name="" value="Cadastrar" href="#">
 
-                        <input id="btnClose" type="submit" value="Acessar" href="#">
-
-                        <div>
+                        <div class="col-md-12">
                             <ul class="social-network social-circle">
                                 <li><a href="#" class="icoFacebook" title="Facebook"><i
                                             class="fab fa-facebook-f"></i></a>
@@ -142,7 +95,59 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <p>Não tem cadastro?
+                        <p class=text-muted>
+                            <a href="#" onclick="logout()">SAIR<i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        </p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal ACESSO -->
+    <div class="modal fade" id="modalAcesso" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="POST" id="loginAccessForm" class="needs-validation box" novalidate name="form">
+                    <div class="modal-header">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="modal-body">
+
+                        <p class="text-muted">Por favor digite o seu e.mail e senha!</p>
+
+                        <input type="email" name="email_usu" placeholder="E-mail" class="form-control"
+                            autocomplete="email" required>
+
+                        <div class="invalid-feedback">Por favor preencha o e.mail para acesso.</div>
+
+                        <input type="password" name="pass_usu" placeholder="Password" class="form-control"
+                            autocomplete="curent-password" required>
+
+                        <div class="invalid-feedback">Por favor preencha uma senha válida</div>
+
+                        <a class="forgot text-muted" href="#">Esqueceu a senha?</a>
+
+                        <input id="btnClose" type="submit" value="Acessar" href="#">
+
+                        <div class="col-md-12">
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i
+                                            class="fab fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <p class="text-muted">Não tem cadastro?
                             <a id="cadastro" href="#!"> Cadastre-se</a>
                         </p>
 
