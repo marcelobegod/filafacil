@@ -77,22 +77,22 @@ main {
   color: var(--background);
 }
 
-/* Ajustes para visualização em celulares */
-@media (min-width: 768px) {
-  main {
-    /* Ajuste a posição para uma exibição mais centralizada em dispositivos maiores */
-    top: 30%;
-  }
-
-  .box-index {
-    /* Reduz um pouco a largura máxima em telas maiores */
-    max-width: 80%;
-  }
-
-  .box-index input[type="submit"] {
-    /* Reduz o tamanho da fonte do botão em telas maiores */
-    font-size: 1.4rem;
-    /* Ajusta o padding do botão para ficar proporcional ao tamanho da tela */
-    padding: 12px 30px;
-  }
+/*/* Ajustes para visualização em celulares */
+/*@media (min-width: 768px) {
+/*  main {
+/*    /* Ajuste a posição para uma exibição mais centralizada em dispositivos maiores */
+/*    top: 30%;
+/*  }
+/*
+/*  .box-index {
+ /*   /* Reduz um pouco a largura máxima em telas maiores */
+/*    max-width: 80%;
+/*  }
+/*
+ /* .box-index input[type="submit"] {
+/*    /* Reduz o tamanho da fonte do botão em telas maiores */
+/*    font-size: 1.4rem;
+/*    /* Ajusta o padding do botão para ficar proporcional ao tamanho da tela */
+/* /*   padding: 12px 30px;
+/*  }
 }

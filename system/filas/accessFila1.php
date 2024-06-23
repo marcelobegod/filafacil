@@ -22,8 +22,8 @@ if (isset($_GET['id_criar_fila'])) {
     $erro++;
 }
 ?>
-<div class="Container">
-    <form id="editarUsuarioForm" class="form row col-6 m-auto mt-4" name="form" method="POST" onsubmit="updateCadEdit(this, '/sidebar-01/API/editar_usuario.php'); return false;">
+<div class="container">
+    <form id="editarUsuarioForm" class="form" name="form" method="POST" onsubmit="updateAccessdEdit(this, '/Fila_Facil/API/access_fila1.php'); return false;">
 
         <div class="modal-header">
             <h4 class="modal-title">Acessar Fila</h4>
@@ -31,46 +31,54 @@ if (isset($_GET['id_criar_fila'])) {
 
         <input type="hidden" name="tabela" value="criarfila">
         <input type="hidden" name="idCampo" value="id_criar_fila">
-
         <input type="hidden" class="form-control" id="id_criar_fila" name="id_criar_fila" value="<?php echo $id ?>">
 
-        <div class="col-md-12">
-            <label for="pessoa_idUsu" class="form-label">Criador</label>
-            <input type="text" class="form-control" id="pessoa_idUsu" name="pessoa_idUsu" value="<?php echo $criador ?>">
-        </div>
-        <div class="col-md-12">
-            <label for="nome_fila" class="form-label">Fila</label>
-            <input type="text" class="form-control" id="nome_fila" name="nome_fila" value="<?php echo $nome ?>">
-        </div>
-        <div class="col-md-12">
-            <label for="data_inicio_fila" class="form-label">Início</label>
-            <input type="text" class="form-control" id="data_inicio_fila" name="data_inicio_fila" value="<?php echo $abertura ?>">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="pessoa_idUsu" class="form-label">Criador</label>
+                <input type="text" class="form-control" id="pessoa_idUsu" name="pessoa_idUsu" value="<?php echo $criador ?>" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="nome_fila" class="form-label">Fila</label>
+                <input type="text" class="form-control" id="nome_fila" name="nome_fila" value="<?php echo $nome ?>" readonly>
+            </div>
         </div>
 
-        <div class="col-md-6 mb-2">
-            <label for="qtd_fila" class="form-label">QTD:</label>
-            <input type="text" class="form-control" id="qtd_fila" name="qtd_fila" autocomplete="email" value="<?php echo $qtd ?>">
-        </div>
-        <div class="col-md-4 mb-2">
-            <label for="prefer_fila" class="form-label">Preferencial?</label>
-            <select class="form-select" id="prefer_fila" name="prefer_fila">
-                <option value="">Informe...</option>
-                <option value="Idoso">Idoso</option>
-                <option value="Gestante">Gestante</option>
-                <option value="P.C.D">P.C.D</option>
-                <option value="Criança de colo">Criança de colo</option>
-            </select>
-        </div>
-        <div class="col-md-6">
-            <label for="posicao_fila" class="form-label">Posição:</label>
-            <input type="text" class="form-control" id="posicao_fila" name="posicao_fila" autocomplete="curent-password" value="<?php echo $posicao ?>">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="data_inicio_fila" class="form-label">Início</label>
+                <input type="text" class="form-control" id="data_inicio_fila" name="data_inicio_fila" value="<?php echo $abertura ?>" readonly>
+            </div>
+
+            <div class="col-md-2">
+                <label for="qtd_fila" class="form-label">QTD:</label>
+                <input type="text" class="form-control" id="qtd_fila" name="qtd_fila" autocomplete="email" value="<?php echo $qtd ?>" readonly>
+            </div>
+
+            <div class="col-md-2">
+                <label for="prefer_fila" class="form-label">Preferencial?</label>
+                <select class="form-select" id="prefer_fila" name="prefer_fila">
+                    <option value="">Informe...</option>
+                    <option value="Idoso">Idoso</option>
+                    <option value="Gestante">Gestante</option>
+                    <option value="P.C.D">P.C.D</option>
+                    <option value="Criança de colo">Criança de colo</option>
+                </select>
+            </div>
         </div>
 
-        <hr>
-        <div id="actions" class="row text-end">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-warning">Editar </button>
-                <a onclick=" loadContent(' /sidebar-01/sistema/usuario/listarUsuarios.php')" class="btn btn-secondary">Voltar</a>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="posicao_fila" class="form-label">Posição:</label>
+                <input type="text" class="form-control" id="posicao_fila" name="posicao_fila" autocomplete="current-password" value="<?php echo $posicao ?>" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 text-end">
+                <hr>
+                <button type="submit" class="btn btn-warning">Editar</button>
+                <a onclick="loadContent('/sidebar-01/sistema/usuario/listarUsuarios.php')" class="btn btn-secondary">Voltar</a>
             </div>
         </div>
     </form>
