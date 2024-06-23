@@ -38,7 +38,7 @@ if (mysqli_num_rows($resultado) > 0) {
                             echo "<td>" . $row["nome_fila"] . "</td>";
                             echo "<td>" . $row["qtd_fila"] . "</td>";
                             echo "<td>";
-                            echo "<a href='#' class='edit open-modal btnAccess' data-id='" . $row["cod_acess_fila"] . "' data-nome='" . $row["nome_fila"] . "'>";
+                            echo "<a href='#' class='edit open-modal btnEditeUsu' data-id='" . $row["id_criar_fila"] . "' onclick=\"loadContent('/Fila_Facil/system/filas/accessFila1.php?id_criar_fila=" . $row["id_criar_fila"] . "')\">";
                             echo "<i class='bx bxs-pencil' data-toggle='tooltip' title='Editar'></i>";
                             echo "</a>";
 
