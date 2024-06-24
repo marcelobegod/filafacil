@@ -171,7 +171,8 @@
     <script src="./assets/js/index/validar_cad_users.js" defer></script>
     <script src="./assets/js/index/validar_login.js" defer></script>
     <script src="./assets/js/logout.js" defer></script>
-    <script src="./assets/js/updateAccessEdit.js" defer></script>
+    <script type="module" src="./assets/js/accessAlert.js"></script>
+    <script type="module" src="./assets/js/updateAccessEdit.js"></script>
     <script src="./assets/js/index/loadIndex.js"></script>
 
 </body>
