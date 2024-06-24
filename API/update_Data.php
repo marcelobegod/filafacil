@@ -74,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Verifica se o método da requisi
 
         if ($stmt->execute()) { // Executa a declaração
             $response = [
-                'redirect' => '/sidebar-01/sistema/usuario/listarUsuarios.php', // URL de redirecionamento
-                'message' => $idValor ? 'Registro atualizado com sucesso!' : 'Registro criado com sucesso!', // Mensagem de sucesso
+                'redirect' => '/Fila_Facil/system/filas/listarFilas.php', // URL de redirecionamento
+                'message' => $idValor ? 'Acesso atualizado com sucesso!' : 'Registro criado com sucesso!', // Mensagem de sucesso
                 'icon' => 'success' // Ícone de sucesso
             ];
         } else {

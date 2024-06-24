@@ -1,18 +1,17 @@
-console.log('Função updateCadEdit carregada');
+console.log('Função updateAccessEdit carregada');
 
-function updateCadEdit(form, urlAPI) {
+function updateAccessEdit(form, urlAPI) {
     if (form) {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            console.log("updateCadEdit chamada!");
+            console.log("updateAccessEdit chamada!");
 
             // Desabilita o botão de submit para evitar envios duplicados
             form.querySelector('button[type="submit"]').disabled = true;
 
             const dadosFormulario = new FormData(form);
-
             try {
-                console.log('Enviando dados para a API...', dadosFormulario);
+                console.log('Enviando dados para a API...');
                 const response = await fetch(urlAPI, {
                     method: "POST",
                     body: dadosFormulario
@@ -92,8 +91,9 @@ function closeModalCad() {
 
 // Chama a função para iniciar a validação **APENAS DENTRO DO DOMContentLoaded**
 document.addEventListener('DOMContentLoaded', function () {
-    const cadUsuarioForm = document.getElementById('cadForm');
+    const cadUsuarioForm = document.getElementById('accessFila1Form');
     if (cadUsuarioForm) {
         // Aqui você pode adicionar a validação do formulário se necessário
+        console.log("Formulário 'accessFila1Form' encontrado e pronto para uso.");
     }
 });
