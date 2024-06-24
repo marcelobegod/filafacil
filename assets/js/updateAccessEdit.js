@@ -1,8 +1,6 @@
 // updateAccessEdit.js
 console.log('Função updateAccessEdit carregada');
 // Importa o mixin
-import { ToastSucesso } from './accessAlert.js';
-
 function updateAccessEdit(form, urlAPI) {
     if (form) {
         form.addEventListener('submit', async (e) => {
