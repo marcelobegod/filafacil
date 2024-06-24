@@ -24,7 +24,7 @@ $tipoFila = trim($dados['prefer_fila']);
 $posicaoAtual = trim($dados['posicao_fila']);
 
 // Função para gerar Posição Atual
-$posicao = position_generator($tipoFila, $qtdFilaCriada, $posicaoAtual);
+$posicao = position_generator($tipoFila, $idFilaCriada);
 
 // Log dos dados recebidos
 error_log("Dados do formulário:");
