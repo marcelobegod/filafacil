@@ -23,13 +23,13 @@ if (isset($_GET['id_criar_fila'])) {
 }
 ?>
 <div class="container">
-    <form id="editarUsuarioForm" class="form" name="form" method="POST" onsubmit="updateAccessdEdit(this, '/Fila_Facil/API/access_fila1.php'); return false;">
+    <form id="accessFila1Form" class="form" name="form" method="POST" onsubmit="updateAccessdEdit(this, '/Fila_Facil/API/access_fila1.php'); return false;">
 
         <div class="modal-header">
             <h4 class="modal-title">Acessar Fila</h4>
         </div>
 
-        <input type="hidden" name="tabela" value="criarfila">
+        <input type="hidden" name="tabela" value="filas_chamada">
         <input type="hidden" name="idCampo" value="id_criar_fila">
         <input type="hidden" class="form-control" id="id_criar_fila" name="id_criar_fila" value="<?php echo $id ?>">
 
@@ -54,7 +54,18 @@ if (isset($_GET['id_criar_fila'])) {
                 <label for="qtd_fila" class="form-label">QTD:</label>
                 <input type="text" class="form-control" id="qtd_fila" name="qtd_fila" autocomplete="email" value="<?php echo $qtd ?>" readonly>
             </div>
-
+            <div class="col-md-6">
+                <label for="nome_acess_pdr" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome_acess_pdr" name="nome_acess_pdr" required>
+            </div>
+            <div class="col-md-6">
+                <label for="telefone_acess_pdr" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="telefone_acess_pdr" name="telefone_acess_pdr" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email_acess_pdr" class="form-label">Fila</label>
+                <input type="text" class="form-control" id="email_acess_pdr" name="email_acess_pdr">
+            </div>
             <div class="col-md-2">
                 <label for="prefer_fila" class="form-label">Preferencial?</label>
                 <select class="form-select" id="prefer_fila" name="prefer_fila">
@@ -77,7 +88,7 @@ if (isset($_GET['id_criar_fila'])) {
         <div class="row">
             <div class="col-md-6 text-end">
                 <hr>
-                <button type="submit" class="btn btn-warning">Editar</button>
+                <button type="submit" class="btn btn-warning">Acessar Fila</button>
                 <a onclick="loadContent('/sidebar-01/sistema/usuario/listarUsuarios.php')" class="btn btn-secondary">Voltar</a>
             </div>
         </div>
