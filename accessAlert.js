@@ -1,5 +1,5 @@
 //accesAlert.js
-const ToastSucesso = Swal.mixin({
+ToastSucesso = Swal.mixin({
     toast: true,
     position: "top-end",
     showConfirmButton: false,

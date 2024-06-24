@@ -152,7 +152,7 @@
                 <a href="#" onclick="logout()">Home</a>
             </li>
             <li>
-                <a href="#" onclick="loadContent('/Fila_Facil/system/filas/listarFilas.php');
+                <a href="#" onclick="loadIndex('/Fila_Facil/system/filas/listarFilas.php');
             event.preventDefault();">Filas</a>
             </li>
             <li>
@@ -171,8 +171,7 @@
     <script src="./assets/js/index/validar_cad_users.js" defer></script>
     <script src="./assets/js/index/validar_login.js" defer></script>
     <script src="./assets/js/logout.js" defer></script>
-    <script type="module" src="./assets/js/accessAlert.js"></script>
-    <script type="module" src="./assets/js/updateAccessEdit.js"></script>
+    <script src="./assets/js/updateAccessEdit.js" defer></script>
     <script src="./assets/js/index/loadIndex.js"></script>
 
 </body>

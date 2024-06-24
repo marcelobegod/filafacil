@@ -67,6 +67,8 @@ if ($posicao === "Vagas Esgotadas") {
                     $retorna = [
                         'status' => true,
                         'msg' => "Acesso realizado com sucesso!",
+                        'redirect' => '/Fila_Facil/index.php',
+                        'posicao' => $posicao,
                     ];
                 } else {
                     // Retornar erro ao atualizar no banco de dados
