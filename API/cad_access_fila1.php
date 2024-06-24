@@ -39,8 +39,7 @@ if ($posicao === "Vagas Esgotadas") {
     $retorna = ['status' => false, 'msg' => "Vagas esgotadas. Não é possível acessar a fila."];
 } else {
     // Preparar a query SQL usando prepared statements para inserção em filas_chamada
-    $sqlInsert = "INSERT INTO filas_chamada (nome_chamada, posicao_chamada, tel_chamada,
-     email_chamada, id_fila_chamada, nome_fila_chamada, tipo_fila_chamada) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
+    $sqlInsert = "INSERT INTO filas_chamada (nome_chamada, posicao_chamada, tel_chamada, email_chamada, id_fila_chamada, nome_fila_chamada, tipo_fila_chamada) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmtInsert = $conexao->prepare($sqlInsert);
 
     if ($stmtInsert === false) {

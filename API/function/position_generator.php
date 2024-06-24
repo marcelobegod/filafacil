@@ -1,4 +1,6 @@
 <?php
+
+// Função para gerar a posição
 function position_generator($tipoFila, $idFilaCriada, $qtdFilaCriada)
 {
     // Obter as posições atuais da tabela filas_chamada
@@ -10,32 +12,33 @@ function position_generator($tipoFila, $idFilaCriada, $qtdFilaCriada)
     $stmt->execute();
     $result = $stmt->get_result();
 
+    // Armazenar as posições existentes em um array
     while ($row = $result->fetch_assoc()) {
         $posicoesExistentes[] = (int)$row['posicao_chamada'];
     }
     $stmt->close();
 
-    // Debug: Exibir o conteúdo de $posicoesExistentes
-    var_dump($posicoesExistentes);
+    // Debug: Exibir o conteúdo de $posicoesExistentes (opcional)
+    // echo '<pre>';
+    // echo "Posições Existentes: ";
+    // print_r($posicoesExistentes);
+    // echo '</pre>';
 
+    // Define a posição inicial para cada tipo de fila
+    $posicao = ($tipoFila == 'padrao') ? 2 : 1;
 
-    // Verificar o tipo de fila e encontrar a próxima posição disponível
-    if ($tipoFila == 'padrao') {
-        // Encontrar o próximo número par disponível
-        for ($i = 2; $i <= $qtdFilaCriada; $i += 2) {
-            if (!in_array($i, $posicoesExistentes)) {
-                return $i;
-            }
-        }
-    } elseif ($tipoFila == 'especial') {
-        // Encontrar o próximo número ímpar disponível
-        for ($i = 1; $i <= $qtdFilaCriada; $i += 2) {
-            if (!in_array($i, $posicoesExistentes)) {
-                return $i;
-            }
-        }
+    // Encontrar a próxima posição disponível, 
+    // incrementando até encontrar uma vaga ou ultrapassar o limite
+    while (in_array($posicao, $posicoesExistentes) && $posicao <= $qtdFilaCriada) {
+
+        // Incrementa de 2 em 2 para manter padrão par/ímpar
+        $posicao += 2;
     }
 
-    // Se todas as posições estiverem preenchidas, retornar "Vagas Esgotadas"
-    return "Vagas Esgotadas";
+    // Verifica se encontrou uma posição dentro do limite
+    if ($posicao <= $qtdFilaCriada) {
+        return $posicao;
+    } else {
+        return "Vagas Esgotadas";
+    }
 }
