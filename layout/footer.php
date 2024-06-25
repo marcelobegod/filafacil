@@ -14,9 +14,9 @@
 
 <!-- SCRIPTS -->
 <script src="../assets/js/logout.js" defer></script>
+<script src="../assets/js/loadContent.js"></script>
 <script src="../assets/js/manage_modals.js" defer></script>
 <script src="../assets/js/initDynamicContent.js" defer></script>
-<script src="../assets/js/loadContent.js"></script>
 
 </body>
 
