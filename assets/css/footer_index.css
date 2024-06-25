@@ -1,19 +1,19 @@
 /*== FOOTER --*/
-.footer {
+.footer_index {
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 1rem 0.5rem;
   background-color: var(--background);
 }
-.footer ul {
+.footer_index ul {
   display: flex;
   align-items: center;
   padding: 0;
   justify-content: space-evenly;
 }
 
-.footer ul li a {
+.footer_index ul li a {
   position: relative;
   color: var(--letraLogo);
   font-size: 1.8rem;
@@ -21,7 +21,7 @@
   text-decoration: none;
 }
 /* == FOOTER ANIMATION ==*/
-.footer ul li a::before {
+.footer_index ul li a::before {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -32,15 +32,15 @@
   transition: width 0.3s ease;
 }
 
-.footer ul li a:hover::before {
+.footer_index ul li a:hover::before {
   width: 100%;
 }
 
-.footer ul li {
+.footer_index ul li {
   display: inline-block;
 }
 
-.footer .copyright {
+.footer_index .copyright {
   margin-top: 1rem;
   text-align: center;
   font-size: 16px;

@@ -7,52 +7,45 @@ $resultado = mysqli_query($conexao, $sql);
 
 if (mysqli_num_rows($resultado) > 0) {
 ?>
-<!-- ## MONTAGEM DA TABELA ## -->
+    <!-- ## MONTAGEM DA TABELA ## -->
 
-<div class="container">
-    <div class="table-responsive-sm">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm">
-                        <h2>Listar <b>Filas</b></h2>
-                    </div>
+    <div class="container">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm">
+                    <h2>Listar <b>Filas</b></h2>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Vagas</th>
-                        <th>Última Posição</th> <!-- Nova coluna -->
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        // Loop para exibir cada usuário na tabela
-                        while ($row = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr>";
-                            echo "<td>" . $row["nome_fila"] . "</td>";
-                            echo "<td>" . $row["qtd_fila"] . "</td>";
-                            echo "<td>" . $row["ultima_posicao"] . "</td>"; // Exibindo a última posição
-                            echo "<td>";
-                            echo "<a href='#' class='edit open-modal btnEditeUsu' data-id='" . $row["id_criar_fila"] . "' onclick=\"loadAccess('/Fila_Facil/system/filas/accessFila1.php?id_criar_fila=" . $row["id_criar_fila"] . "')\">";
-                            echo "<i class='bx bxs-pencil' data-toggle='tooltip' title='Editar'></i>";
-                            echo "</a>";
-
-                            echo "<a href='#' class='delete open-modal btnDelete' data-id='" . $row["cod_acess_fila"] . "' data-nome='" . $row["nome_fila"] . "'>";
-                            echo "<i class='bx bxs-trash-alt' data-toggle='tooltip' title='Deletar'></i>";
-                            echo "</a>";
-                            echo "</td>";
-                            echo "</tr>";
-                        }
-                        ?>
-                </tbody>
-            </table>
         </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Vagas</th>
+                    <th>Posição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Loop para exibir cada usuário na tabela
+                while ($row = mysqli_fetch_assoc($resultado)) {
+                    echo "<tr>";
+                    echo "<td>" . $row["nome_fila"] . "</td>";
+                    echo "<td>" . $row["qtd_fila"] . "</td>";
+                    echo "<td>" . $row["ultima_posicao"] . "</td>"; // Exibindo a última posição
+                    echo "<td>";
+                    echo "<a href='#' class='edit open-modal btnEditeUsu' data-id='" . $row["id_criar_fila"] . "' onclick=\"loadAccess('/Fila_Facil/system/filas/accessFila1.php?id_criar_fila=" . $row["id_criar_fila"] . "')\">";
+                    echo "<i class='bx bxs-pencil' data-toggle='tooltip' title='Acessar'></i>";
+                    echo "</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+
     </div>
-</div>
 
 <?php
 } else {
@@ -73,13 +66,11 @@ mysqli_close($conexao);
                 </div>
                 <div class="modal-body">
 
-                    <input type="email" name="email_usu" placeholder="E-mail" class="form-control" autocomplete="email"
-                        required>
+                    <input type="email" name="email_usu" placeholder="E-mail" class="form-control" autocomplete="email" required>
 
                     <div class="invalid-feedback">Por favor preencha o e.mail para acesso.</div>
 
-                    <input type="password" name="pass_usu" placeholder="Password" class="form-control"
-                        autocomplete="curent-password" required>
+                    <input type="password" name="pass_usu" placeholder="Password" class="form-control" autocomplete="curent-password" required>
 
                     <div class="invalid-feedback">Por favor preencha uma senha válida</div>
 

@@ -6,22 +6,27 @@
   padding: 1rem 0.5rem;
   background-color: var(--background);
 }
-.footer ul {
+.footer_navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer_navbar .list_navbar {
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 0;
-  justify-content: space-evenly;
+  gap: 2rem;
 }
 
-.footer ul li a {
+.footer_navbar ul li a {
   position: relative;
   color: var(--letraLogo);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;
 }
 /* == FOOTER ANIMATION ==*/
-.footer ul li a::before {
+.footer_navbar ul li a::before {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -31,18 +36,6 @@
   background-color: var(--opion5);
   transition: width 0.3s ease;
 }
-
-.footer ul li a:hover::before {
+.footer_navbar ul li a:hover::before {
   width: 100%;
-}
-
-.footer ul li {
-  display: inline-block;
-}
-
-.footer .copyright {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 16px;
-  color: var(--opion5);
 }

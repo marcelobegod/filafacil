@@ -1,4 +1,5 @@
 <?php
+/* ===  API PARA O ACESSO DO USUÁRIO NA FILA === */
 ob_start();
 session_start();
 

@@ -1,11 +1,11 @@
 <?php
-/* ===  API PARA O PRIMEIRO CADASTRO DO USUÁRIO === */
-// Inicia a captura de saída
+/* ===  API PARA O CRIAR AS FILAS === */
 ob_start();
 session_start();
+// Arquivo de CONEXAO
 include_once("conexao.php");
-include_once(__DIR__ . '/function/criar_hash.php');
-include_once(__DIR__ . '/function/verify_users.php');
+include_once("./function/verify_users.php");
+include_once("./function/criar_codAccessphp");
 
 // Captura os dados do formulário
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -13,44 +13,39 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 // Inicializa o array de resposta
 $retorna = [];
 
-// Receber e limpar os dados do formulário
-$nome = trim($dados['nome_usu']);
-$tel = trim($dados['tel_usu']);
-$email = trim($dados['email_usu']);
-$senha = trim($dados['senha_usu']);
+// Receber e limpar os dados do fila
+$nome = trim($dados['nome_fila']);
+$qtd = trim($dados['qtd_fila']);
+$inicio = trim($dados['data_inicio_fila']);
+$codAccess = trim($dados['cod_acess_fila']);
+$posicao = trim($dados['posicao_fila']);
+$criador = trim($dados['pessoa_idUsu']);
 
 // Função que verifica se usuário já existe no BD
-$userExists = verifyUsers($email, $nome);
+$fileExists = verifyUsers($email, $codAccess);
 
-if (!$userExists['email_exist'] && !$userExists['nome_exist']) {
+if (!$fileExists['codigo_exist'] && !$fileExists['nome_exist']) {
     // Criar um hash seguro da senha
-    $hashSenha = criarHash($senha);
+    $codAccess = criarHash($senha);
 
     // Preparar a query SQL usando prepared statements
-    $sql = "INSERT INTO usuario (nome_usu, tel_usu, email_usu, senha_usu) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO filafacil(nome_fila, qtd_fila, data_inicio_fila, cod_acess_fila, posicao_fila, pessoa_idUsu) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($stmt, "ssss", $nome, $tel, $email, $hashSenha);
+    mysqli_stmt_bind_param($stmt, "ssssss", $nome, $qtd, $inicio, $codAccess, $posicao, $criador);
 
     // Executar a query
     if (mysqli_stmt_execute($stmt)) {
-        // Armazena dados na $_SESSION
-        $_SESSION['nivel_usu'] = $nivel;
-        $_SESSION['nome_usu'] = $nome;
 
-
-        // Retornar sucesso
+        //Retorna sucesso
         $retorna = [
             'status' => true,
             'msg' => "Cadastro realizado com sucesso!",
-            'nome_usu' => $nome,
-            'nivel_usu' => $nivel,
         ];
     } else {
         // Retornar erro ao inserir no banco de dados
         error_log("Erro ao executar statement: " . mysqli_stmt_error($stmt));
-        $retorna = ['status' => false, 'msg' => "Erro ao cadastrar usuário. Tente novamente."];
+        $retorna = ['status' => false, 'msg' => "Erro ao cadastrar login. Tente novamente."];
     }
-
     // Fecha a conexão e envia a resposta dentro do IF principal
     mysqli_stmt_close($stmt);
     mysqli_close($conexao);

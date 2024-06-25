@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 if (isset($_SESSION['nivel_usu'])) {
     switch ($_SESSION['nivel_usu']) {
         case 'usuario':
-            include_once __DIR__ . "/../../layout/sidebar/footer_usuario.php";
+            include_once __DIR__ . "/../../layout/sidebar/footerUsuario.php";
             break;
         case 'cliente':
             include_once __DIR__ . "/../../layout/sidebar/footer_cliente.php";
