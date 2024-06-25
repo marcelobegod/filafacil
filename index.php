@@ -29,7 +29,7 @@
     <main id="dynamic-index">
         <!-- BOX Login -->
         <div id=" acessoModal" class="box-index">
-            <input type="submit" value="Acessar Fila" href="javascript:void(0)" onclick="loadIndex('/Fila_Facil/system/filas/listarFilas.php'); 
+            <input type="submit" value="Acessar Fila" href="javascript:void(0)" onclick="loadAccess('/Fila_Facil/system/filas/listarFilas.php'); 
                 event.preventDefault();">
             <input id="openLogin" type="submit" value="Criar Fila">
             <img src="./assets/img/logoff.png" class="img-fluid" alt="Logoff">
@@ -152,7 +152,7 @@
                 <a href="#" onclick="logout()">Home</a>
             </li>
             <li>
-                <a href="#" onclick="loadIndex('/Fila_Facil/system/filas/listarFilas.php');
+                <a href="#" onclick="loadAccess('/Fila_Facil/system/filas/listarFilas.php');
             event.preventDefault();">Filas</a>
             </li>
             <li>
@@ -172,7 +172,7 @@
     <script src="./assets/js/index/validar_login.js" defer></script>
     <script src="./assets/js/logout.js" defer></script>
     <script src="./assets/js/updateAccessEdit.js" defer></script>
-    <script src="./assets/js/index/loadIndex.js"></script>
+    <script src="./assets/js/loadAccess.js"></script>
 
 </body>
 

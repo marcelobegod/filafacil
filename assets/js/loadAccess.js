@@ -1,5 +1,4 @@
-console.log('loadIndex carregada');
-function loadIndex(url) {
+function loadContent(url) {
     var container = document.getElementById("dynamic-index");
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -12,7 +11,7 @@ function loadIndex(url) {
 
 
         }
-
+        initDynamicContent();
     };
     xhttp.open("GET", url, true);
     xhttp.send();
