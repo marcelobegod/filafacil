@@ -21,7 +21,7 @@ $nomeChamada = trim($dados['nome_chamada']);
 $telChamada = trim($dados['tel_chamada']);
 $emailChamada = trim($dados['email_chamada']);
 $tipoFila = trim($dados['prefer_fila']);
-$posicaoAtual = trim($dados['posicao_fila']);
+$posicaoAtual = trim($dados['ultima_posicao']);
 
 // Função para gerar Posição Atual
 $posicao = position_generator($tipoFila, $idFilaCriada);

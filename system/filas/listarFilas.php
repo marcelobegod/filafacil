@@ -2,10 +2,7 @@
 session_start();
 include_once('../../API/conexao.php');
 
-/* ## LÓGICA A PAGINAÇÃO ## */
-
-/* CODIGO DA TABELA */
-$sql = "SELECT * FROM criarfila ";
+$sql = "SELECT *, JSON_EXTRACT(posicao_fila, '$[-1]') AS ultima_posicao FROM criarfila ORDER BY ultima_posicao ASC";
 $resultado = mysqli_query($conexao, $sql);
 
 if (mysqli_num_rows($resultado) > 0) {
@@ -27,6 +24,7 @@ if (mysqli_num_rows($resultado) > 0) {
                     <tr>
                         <th>Nome</th>
                         <th>Vagas</th>
+                        <th>Última Posição</th> <!-- Nova coluna -->
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -37,6 +35,7 @@ if (mysqli_num_rows($resultado) > 0) {
                             echo "<tr>";
                             echo "<td>" . $row["nome_fila"] . "</td>";
                             echo "<td>" . $row["qtd_fila"] . "</td>";
+                            echo "<td>" . $row["ultima_posicao"] . "</td>"; // Exibindo a última posição
                             echo "<td>";
                             echo "<a href='#' class='edit open-modal btnEditeUsu' data-id='" . $row["id_criar_fila"] . "' onclick=\"loadAccess('/Fila_Facil/system/filas/accessFila1.php?id_criar_fila=" . $row["id_criar_fila"] . "')\">";
                             echo "<i class='bx bxs-pencil' data-toggle='tooltip' title='Editar'></i>";
@@ -63,6 +62,7 @@ if (mysqli_num_rows($resultado) > 0) {
 // Fechar a conexão com o banco de dados
 mysqli_close($conexao);
 ?>
+
 <!-- Modal ACESSO -->
 <div class="modal fade" id="modalAcesso" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">

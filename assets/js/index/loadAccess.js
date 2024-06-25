@@ -1,4 +1,4 @@
-function loadContent(url) {
+function loadAccess(url) {
     var container = document.getElementById("dynamic-index");
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -11,7 +11,7 @@ function loadContent(url) {
 
 
         }
-        initDynamicContent();
+
     };
     xhttp.open("GET", url, true);
     xhttp.send();
