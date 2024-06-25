@@ -78,8 +78,7 @@ function updateAccessEdit(form, urlAPI) {
                             </div>
                         `
                     }).then(() => {
-                        // Redireciona para o index
-                        loadIndex(resposta.redirect);
+
                     });
 
                     form.reset();
