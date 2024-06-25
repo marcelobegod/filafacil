@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap");
+@import url("login_index.css");
+@import url("footer_index.css");
+@import url("footer_navbar.css");
+@import url("visit.css");
+
+:root {
+  --cinza: #d0d7e1;
+  --claro: #9ccddb;
+  --medio: #5790ab;
+  --escuro: #064469;
+  --escuroforte: #072d44;
+  --background: #03172b;
+  --letraLogo: #0e5fb1;
+  --option: #0e68c2;
+  --optin2: #0c4c84;
+  --oprion3: #0c4b8c;
+  --option4: #0c4c84;
+  --opion5: #85bbf4;
+  --option6: #1374d8;
+  --blackpiano: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background);
+  background-image: url("../img/banner3.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Mina", cursive;
+}
+
+main {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  padding: 0;
+}
+/*== BOX Login ==*/
+.box-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 20px;
+  gap: 2rem;
+  transition: 0.25s;
+}
+
+/*== INPUT SUBMIT ==*/
+.box-index input[type="submit"] {
+  background: none;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 2px solid var(--letraLogo);
+  padding: 14px 40px;
+  outline: none;
+  color: var(--letraLogo);
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box-index input[type="submit"]:hover {
+  background: var(--opion5);
+  color: var(--background);
+}
