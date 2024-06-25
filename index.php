@@ -172,7 +172,7 @@
     <script src="./assets/js/index/validar_login.js" defer></script>
     <script src="./assets/js/logout.js" defer></script>
     <script src="./assets/js/updateAccessEdit.js" defer></script>
-    <script src="./assets/js/loadAccess.js"></script>
+    <script src="./assets/js/index/loadAccess.js"></script>
 
 </body>
 
